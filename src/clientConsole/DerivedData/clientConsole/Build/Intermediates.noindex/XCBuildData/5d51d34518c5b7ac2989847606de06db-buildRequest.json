@@ -1,0 +1,56 @@
+{
+  "_buildCommand2" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "6b2ac86ab4d61f7f0cccb6d16084a00f37f2142d32ed26195f0cef7b8e7cb795"
+    }
+  ],
+  "containerPath" : "/Users/etudiant/Documents/src/clientConsole/clientConsole.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx13.1",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "x86_64h",
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/etudiant/Documents/src/clientConsole/DerivedData/clientConsole/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/etudiant/Documents/src/clientConsole/DerivedData/clientConsole/Build/Products",
+      "derivedDataPath" : "/Users/etudiant/Documents/src/clientConsole/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/etudiant/Documents/src/clientConsole/DerivedData/clientConsole/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/etudiant/Documents/src/clientConsole/DerivedData/clientConsole/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/etudiant/Documents/src/clientConsole/DerivedData/clientConsole/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
