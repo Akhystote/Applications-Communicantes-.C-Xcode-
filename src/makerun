@@ -1,0 +1,33 @@
+# makerun — Lance le serveur, le client C et le simulateur iOS
+# Utilisation : make -f makerun
+
+BIN_DIR       = .
+XCODE_PROJECT = Xcode/MultipleViews.xcodeproj
+XCODE_SCHEME  = MultipleViews
+SIMULATOR     = iPhone SE (3rd generation)
+HOST          = localhost
+PORT          = 5001
+
+.PHONY: all run run_serveur run_client run_simulateur
+
+all: run
+
+run: run_serveur run_simulateur run_client
+
+# Lance le serveur dans un terminal séparé
+run_serveur:
+	osascript -e 'tell application "Terminal" to do script "cd $(CURDIR) && ./$(BIN_DIR)/serveur"'
+
+# Compile et lance l'app iOS sur le simulateur
+run_simulateur:
+	xcodebuild \
+		-project $(XCODE_PROJECT) \
+		-scheme $(XCODE_SCHEME) \
+		-destination 'platform=iOS Simulator,name=$(SIMULATOR)' \
+		build 2>/dev/null
+	xcrun simctl boot "$(SIMULATOR)" 2>/dev/null || true
+	open -a Simulator
+
+# Lance le client console dans un terminal séparé
+run_client:
+	osascript -e 'tell application "Terminal" to do script "cd $(CURDIR) && ./$(BIN_DIR)/client $(HOST) $(PORT)"'
